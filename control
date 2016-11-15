@@ -49,6 +49,7 @@ Depends: geany-plugin-addons (>= ${source:Version}),
          geany-plugin-extrasel (>= ${source:Version}),
          geany-plugin-gendoc (>= ${source:Version}),
          geany-plugin-geniuspaste (>= ${source:Version}),
+         geany-plugin-git-changebar (>= ${source:Version}),
          geany-plugin-insertnum (>= ${source:Version}),
          geany-plugin-latex (>= ${source:Version}),
          geany-plugin-lipsum (>= ${source:Version}),
@@ -347,6 +348,18 @@ Priority: extra
 Section: oldlibs
 Description: transitional dummy package for geany-plugin-projectorganizer
  This is a transitional dummy package. It can safely be removed.
+
+Package: geany-plugin-git-changebar
+Enhances: geany
+Architecture: any
+Depends: ${geany:ABI}, geany-plugins-common (= ${source:Version}),
+         ${shlibs:Depends}, ${misc:Depends}
+Description: git change bar plugin for Geany
+ This plugin highlights uncommitted changes to files tracked with Git, and
+ allows one to navigate through the hunks.
+ .
+ Geany is a small and lightweight integrated development environment using the
+ Gtk+ toolkit.
 
 Package: geany-plugin-insertnum
 Enhances: geany
